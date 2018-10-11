@@ -21,5 +21,5 @@ var clearint = setInterval(check,10000);
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json());
 app.use(cors());
-
-// app.listen(3000);
+require('./Routes/routes')(app);
+app.listen(3000);
