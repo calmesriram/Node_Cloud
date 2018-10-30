@@ -2,6 +2,16 @@ module.exports=(app)=>{
     var route_controllers = require('../Controllers/controller');
     // test purpose
     app.get('/',route_controllers.test);
+    
+    // create users
+    app.post('/singup',route_controllers.singup);
+    // view all users
+    app.get('/seeusers',route_controllers.seeusers);
+    
+    // delete users
+    app.delete('/deleteusers',route_controllers.deleteusers);
+
+    app.put('/updateusers',route_controllers.updateusers);
 
     // create question
     app.post('/createquestion',route_controllers.qst);
